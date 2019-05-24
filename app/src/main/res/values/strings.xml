@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Depth Perception</string>
+    <string name="api_key">Enter your API KEY or EMAIL</string>
+    <string name="password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="movie_title_string">Enter Movie Title</string>
+</resources>

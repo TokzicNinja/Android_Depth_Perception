@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiscoverActivity">
+
+    <LinearLayout
+        android:elevation="5dp"
+        android:id="@+id/searchLinearLayout"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/movieEditText"
+            android:layout_weight="1"
+            android:hint="@string/movie_title_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete|textAutoCorrect"
+            android:autofillHints="Movie Title" />
+
+        <Button
+            android:background="@drawable/icon_search"
+            android:id="@+id/search_button"
+            android:clickable="true"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="8"
+            android:focusable="true"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.01"
+            android:layout_marginTop="4dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listLinearLayout"
+        android:layout_below="@id/searchLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:id="@+id/movieList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_marginTop="16dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.BottomNavigationView
+
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorPrimary"
+        app:menu="@menu/navigation"/>
+</LinearLayout>
+
+    <!--app:itemIconTint="@color/white"-->
+    <!--app:itemTextColor="@color/white"-->
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:id="@+id/app_bar">-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+</RelativeLayout>
